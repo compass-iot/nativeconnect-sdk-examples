@@ -1,0 +1,30 @@
+{
+  "name": "nativeconnect-sdk-ts-examples",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Examples of how to use Native Connect APIs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/compass-iot/nativeconnect-sdk-examples.git"
+  },
+  "keywords": [
+    "nativeconnect",
+    "native-connect"
+  ],
+  "author": "Sujith Simon (sujith@compassiot.com.au)",
+  "license": "ISC",
+  "dependencies": {
+    "@buf/nativeconnect_api.bufbuild_es": "1.9.0-00000000000000-1f3fb8c687d6.2",
+    "@buf/nativeconnect_api.connectrpc_es": "1.4.0-00000000000000-1f3fb8c687d6.3",
+    "@buf/compassiot_model.bufbuild_es":"1.9.0-00000000000000-4fa180fac270.2",
+    "@buf/compassiot_model.connectrpc_es":"1.4.0-00000000000000-4fa180fac270.3",
+    "@bufbuild/protobuf": "1.9.0",
+    "@connectrpc/connect": "1.4.0",
+    "@connectrpc/connect-node": "1.4.0",
+    "@connectrpc/connect-web": "1.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/compass-iot/nativeconnect-sdk-examples/issues"
+  },
+  "homepage": "https://github.com/compass-iot/nativeconnect-sdk-examples#readme"
+}
