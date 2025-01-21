@@ -6,7 +6,7 @@ import { TIMEOUT_MS, createNodeClient, retryStream } from "./client"
 const client = createNodeClient()
 
 const request = new native.RealtimeRawPointByVinsRequest({
-  vins: ["LRW3F7FS9PC893577"],
+  vins: ["LRW3F7FS9PC893577", "1C4RJHKG2P8863343"],
   maxStalenessMinutes: 3n,
 })
 
