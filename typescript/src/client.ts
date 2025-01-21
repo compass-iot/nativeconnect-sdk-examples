@@ -1,10 +1,10 @@
-import {Service} from "@buf/nativeconnect_api.connectrpc_es/nativeconnect/api/v1/nativeconnect_connect"
 import {createConnectTransport as createNodeTransport} from "@connectrpc/connect-node"
 import {
 	createConnectTransport as createWebTransport,
 	ConnectTransportOptions as WebTransportOptions
 } from "@connectrpc/connect-web"
-import {Code, ConnectError, createPromiseClient, PromiseClient, type Interceptor} from "@connectrpc/connect"
+import {Code, ConnectError, createClient, Client, type Interceptor} from "@connectrpc/connect"
+import {Service} from "@buf/nativeconnect_api.bufbuild_es/nativeconnect/api/v1/nativeconnect_pb";
 
 const HOST = "https://nativeconnect.cloud"
 const SECRET = "<!!!!! INSERT YOUR API KEY HERE !!!!!>"
@@ -33,7 +33,7 @@ function resetBackoff() {
 	backoffState = {stage: Math.max(backoffState.stage - 1, 0), at: new Date() }
 }
 
-function createAuthInterceptor(secret: string, client: PromiseClient<typeof Service>): Interceptor {
+function createAuthInterceptor(secret: string, client: Client<typeof Service>): Interceptor {
 	// Need a `let` so we can replace the access token for long-lived usage
 	let at = ""
 
@@ -59,8 +59,8 @@ function createAuthInterceptor(secret: string, client: PromiseClient<typeof Serv
 	}
 }
 
-function createNodeClient(): PromiseClient<typeof Service> {
-	const noauthClient = createPromiseClient(Service, createNodeTransport({
+function createNodeClient(): Client<typeof Service> {
+	const noauthClient = createClient(Service, createNodeTransport({
 		baseUrl: HOST,
 		httpVersion: "1.1",
 	}))
@@ -69,11 +69,11 @@ function createNodeClient(): PromiseClient<typeof Service> {
 		httpVersion: "2",
 		interceptors: [createAuthInterceptor(SECRET, noauthClient)]
 	})
-	return createPromiseClient(Service, transport)
+	return createClient(Service, transport);
 }
 
-function createWebClient(options?: Omit<WebTransportOptions, "baseUrl">): PromiseClient<typeof Service> {
-	const noauthClient = createPromiseClient(Service, createWebTransport({
+function createWebClient(options?: Omit<WebTransportOptions, "baseUrl">): Client<typeof Service> {
+	const noauthClient = createClient(Service, createWebTransport({
 		baseUrl: HOST,
 	}))
 	const transport = createWebTransport({
@@ -81,7 +81,7 @@ function createWebClient(options?: Omit<WebTransportOptions, "baseUrl">): Promis
 		interceptors: [createAuthInterceptor(SECRET, noauthClient)],
 		...options,
 	})
-	return createPromiseClient(Service, transport)
+	return createClient(Service, transport);
 }
 
 function createAbortListener<T>(abortController: AbortController): Promise<T> {
