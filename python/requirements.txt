@@ -30,7 +30,7 @@ nativeconnect-api-protocolbuffers-pyi==33.4.0.1.20251111081446+df456be87b25
 nativeconnect-api-protocolbuffers-python==33.4.0.1.dev0+fa5e77233ee8
 protobuf==6.33.4
 requests==2.32.5
-setuptools==80.10.1
+setuptools==80.10.2
 types-grpcio==1.0.0.20251009
 types-protobuf==6.32.1.20251210
 typing_extensions==4.15.0
