@@ -28,7 +28,7 @@ nativeconnect-api-community-nipunn1313-mypy-grpc==4.0.0.1.dev0+e6c0e10abe13
 nativeconnect-api-grpc-python==1.78.0.1.dev0+e6c0e10abe13
 nativeconnect-api-protocolbuffers-pyi==34.0.0.1.20251111081446+df456be87b25
 nativeconnect-api-protocolbuffers-python==34.0.0.1.dev0+e6c0e10abe13
-protobuf==6.33.5
+protobuf==7.34.0
 requests==2.32.5
 setuptools==82.0.1
 types-grpcio==1.0.0.20251009
