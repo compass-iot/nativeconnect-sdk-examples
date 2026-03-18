@@ -14,9 +14,9 @@
   "author": "Sujith Simon (sujith@compassiot.com.au)",
   "license": "ISC",
   "dependencies": {
-    "@buf/compassiot_model.bufbuild_es": "^1.9.0-00000000000000-a347386eb9ec.2",
-    "@buf/nativeconnect_api.bufbuild_es": "^1.9.0-00000000000000-fa5e77233ee8.2",
-    "@buf/nativeconnect_api.connectrpc_es": "^1.4.0-00000000000000-fa5e77233ee8.3",
+    "@buf/compassiot_model.bufbuild_es": "^1.9.0-00000000000000-8aade109322f.2",
+    "@buf/nativeconnect_api.bufbuild_es": "^1.9.0-00000000000000-e6c0e10abe13.2",
+    "@buf/nativeconnect_api.connectrpc_es": "^1.4.0-00000000000000-e6c0e10abe13.3",
     "@bufbuild/protobuf": "^1.9.0",
     "@connectrpc/connect": "^1.4.0",
     "@connectrpc/connect-node": "^1.4.0",
