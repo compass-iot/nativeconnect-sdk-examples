@@ -15,8 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "@buf/compassiot_model.bufbuild_es": "^1.9.0-00000000000000-8aade109322f.2",
-    "@buf/nativeconnect_api.bufbuild_es": "^1.9.0-00000000000000-e6c0e10abe13.2",
-    "@buf/nativeconnect_api.connectrpc_es": "^1.4.0-00000000000000-e6c0e10abe13.3",
+    "@buf/nativeconnect_api.bufbuild_es": "^1.9.0-00000000000000-2680ba0f6c29.2",
+    "@buf/nativeconnect_api.connectrpc_es": "^1.4.0-00000000000000-2680ba0f6c29.3",
     "@bufbuild/protobuf": "^1.9.0",
     "@connectrpc/connect": "^1.4.0",
     "@connectrpc/connect-node": "^1.4.0",
