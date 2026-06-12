@@ -5,7 +5,7 @@ bufbuild-protovalidate-protocolbuffers-pyi==35.0.0.1.20260415201107+50325440f8f2
 bufbuild-protovalidate-protocolbuffers-python==35.0.0.1.20260415201107+50325440f8f2
 certifi==2026.5.20
 charset-normalizer==3.4.7
-compassiot-model-community-nipunn1313-mypy==5.1.0.1.dev0+8aade109322f
+compassiot-model-community-nipunn1313-mypy==5.1.0.1.dev0+1423ccfa2fee
 compassiot-model-community-nipunn1313-mypy-grpc==5.1.0.1.20251111081446+0bc71b3ee0e1
 compassiot-model-grpc-python==1.81.1.1.20251111081446+0bc71b3ee0e1
 compassiot-model-protocolbuffers-pyi==35.0.0.1.20251111081446+0bc71b3ee0e1
@@ -23,11 +23,11 @@ grpc-interceptor==0.15.4
 grpcio==1.81.1
 grpcio-tools==1.81.1
 idna==3.18
-nativeconnect-api-community-nipunn1313-mypy==5.1.0.1.dev0+2680ba0f6c29
+nativeconnect-api-community-nipunn1313-mypy==5.1.0.1.dev0+e53aa8bf6e97
 nativeconnect-api-community-nipunn1313-mypy-grpc==5.1.0.1.dev0+e53aa8bf6e97
 nativeconnect-api-grpc-python==1.81.1.1.dev0+e53aa8bf6e97
 nativeconnect-api-protocolbuffers-pyi==35.0.0.1.20251111081446+df456be87b25
-nativeconnect-api-protocolbuffers-python==35.0.0.1.dev0+2680ba0f6c29
+nativeconnect-api-protocolbuffers-python==35.0.0.1.dev0+e53aa8bf6e97
 protobuf==6.33.6
 requests==2.34.2
 setuptools==82.0.1
