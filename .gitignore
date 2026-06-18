@@ -3,3 +3,7 @@ node_modules/
 __pycache__
 .idea
 
+# npm is the canonical package manager; ignore pnpm/yarn lockfiles to avoid drift
+pnpm-lock.yaml
+yarn.lock
+

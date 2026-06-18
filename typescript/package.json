@@ -14,16 +14,18 @@
   "author": "Sujith Simon (sujith@compassiot.com.au)",
   "license": "ISC",
   "dependencies": {
-    "@buf/compassiot_model.bufbuild_es": "^1.9.0-00000000000000-1423ccfa2fee.2",
-    "@buf/nativeconnect_api.bufbuild_es": "^1.9.0-00000000000000-e53aa8bf6e97.2",
-    "@buf/nativeconnect_api.connectrpc_es": "^1.4.0-00000000000000-e53aa8bf6e97.3",
-    "@bufbuild/protobuf": "^1.9.0",
-    "@connectrpc/connect": "^1.4.0",
-    "@connectrpc/connect-node": "^1.4.0",
-    "@connectrpc/connect-web": "^1.4.0"
+    "@buf/compassiot_model.bufbuild_es": "2.12.0-00000000000000-9f28890b13a0.1",
+    "@buf/nativeconnect_api.bufbuild_es": "2.12.0-00000000000000-c4cf4694f6bd.1",
+    "@bufbuild/protobuf": "^2.12.0",
+    "@connectrpc/connect": "^2.1.2",
+    "@connectrpc/connect-node": "^2.1.2",
+    "@connectrpc/connect-web": "^2.1.2"
   },
   "bugs": {
     "url": "https://github.com/compass-iot/nativeconnect-sdk-examples/issues"
   },
-  "homepage": "https://github.com/compass-iot/nativeconnect-sdk-examples#readme"
+  "homepage": "https://github.com/compass-iot/nativeconnect-sdk-examples#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
 }

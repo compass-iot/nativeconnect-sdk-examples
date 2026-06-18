@@ -7,7 +7,7 @@ import {
 const client = createNodeClient()
 
 const request = create(InitiateVehicleSignUpRequestSchema, {
-  email: "sujith@compassiot.com.au",
+  email: "consent_owner@email.com",
   vin: "LRW3F7FS9PC893577"
 })
 

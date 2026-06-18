@@ -7,8 +7,8 @@ import {Code, ConnectError, createClient, Client, type Interceptor} from "@conne
 import {Service} from "@buf/nativeconnect_api.bufbuild_es/nativeconnect/api/v1/nativeconnect_pb";
 
 const HOST = "https://nativeconnect.cloud"
-const SECRET = "<!!!!! INSERT YOUR API KEY HERE !!!!!>"
-const TIMEOUT_MS = 1000 * 60 * 3  // used by retryStream
+const SECRET = "<<<INSERT YOUR API KEY HERE>>>"
+const TIMEOUT_MS = 1000 * 60 * 7  // used by retryStream
 
 // Backoff constant (Base Multiplier)
 const BACKOFF_CONSTANT = 5_000;

@@ -5,12 +5,13 @@ import nativeconnect.api.v1.nativeconnect_pb2 as native
 def main():
     client = create_native_client()
 
-    request = native.InitiateVehicleSignUpRequest(
+    request = native.CheckCompatibilityRequest(
         vin="LRW3F7FS9PC893577",
-        email="consent_owner@email.com",
+        region=native.Region.COUNTRY_AUS,
+        usecase=native.Usecase.USECASE_B2C
     )
 
-    response = client.InitiateVehicleSignUp(request)
+    response = client.CheckCompatibility(request)
 
     print(response)
 

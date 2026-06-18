@@ -5,12 +5,11 @@ import nativeconnect.api.v1.nativeconnect_pb2 as native
 def main():
     client = create_native_client()
 
-    request = native.InitiateVehicleSignUpRequest(
-        vin="LRW3F7FS9PC893577",
-        email="consent_owner@email.com",
+    request = native.GetVehicleStatusRequest(
+        vin="LRW3F7FS9PC893577"
     )
 
-    response = client.InitiateVehicleSignUp(request)
+    response = client.GetVehicleStatus(request)
 
     print(response)
 

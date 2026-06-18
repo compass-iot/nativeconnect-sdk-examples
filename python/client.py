@@ -96,7 +96,7 @@ class UnaryRestInterceptor(grpc.UnaryUnaryClientInterceptor):
 				headers[k] = v
 
 		# Create future
-		future = asyncio.get_event_loop().create_future()
+		future = asyncio.new_event_loop().create_future()
 
 		# Make request & deserialize it
 		response = requests.post(url, data=request.SerializeToString(True), headers=headers)

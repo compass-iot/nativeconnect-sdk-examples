@@ -27,10 +27,10 @@ yarn config set npmScopes.buf.npmRegistryServer https://buf.build/gen/npm/v1/
 
 2. Install Node modules:
 ```bash
-npm install && npm update
+npm install
 ```
 
-3. Set your API key in `src/client.ts` on line `7`
+3. Set your API key in the `SECRET` constant in `src/client.ts`
 
 4. To run any of the examples, we encourage using Typescript server to avoid TS transpilation issues. We recommend using `tsx` as it works for us, so to run, for instance, `src/initiate_vehicle_signup.ts`, do:
 ```bash
@@ -52,15 +52,15 @@ Use `connect-web` when you are building an app running in the browser (e.g. Reac
 
 ### Long-lived Streaming
 
-The HTTP/2 protocol was designed to buffer payload too large to be sent over HTTP/1.1. Hence HTTP timeouts still exist in the streaming world. RPCs which may have long periods of inactivity, such as `RealtimeRawPointByVins`, suffer from [HTTP 504](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504) timeout if there are no data sent within 5 minutes. Note that since `RealtimeRawPointByGeometry` aggregates vehicles, it is more frequent in sending data, and hence suffers less from <strong>HTTP 504</strong> timeout.
+The HTTP/2 protocol was designed to buffer payload too large to be sent over HTTP/1.1. Hence HTTP timeouts still exist in the streaming world. RPCs which may have long periods of inactivity, such as `RawPointsByVins`, suffer from [HTTP 504](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504) timeout if there are no data sent within 5 minutes.
 
-To support such use case, we expose a utility function from `client.ts` to create a new stream whenever it gets disconnected due to no data::
+To support such use case, we expose a utility function from `client.ts` to create a new stream whenever it gets disconnected due to no data (see `src/raw_points_by_vins.ts` and `src/realtime_stitched_points_by_vins.ts`):
 ```TS
 import { createNodeClient, retryStream } from "./client"
 
 const client = createNodeClient()
 
-const stream = () => client.realtimeRawPointByVins(request)
+const stream = () => client.rawPointsByVins(request)
 
 for await (const response of retryStream(stream)) {
     // Do something
